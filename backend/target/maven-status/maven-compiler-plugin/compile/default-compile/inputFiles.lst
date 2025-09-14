@@ -1,0 +1,14 @@
+/root/community/backend/src/main/java/com/community/entity/User.java
+/root/community/backend/src/main/java/com/community/config/WebConfig.java
+/root/community/backend/src/main/java/com/community/CommunityApplication.java
+/root/community/backend/src/main/java/com/community/dto/LoginRequest.java
+/root/community/backend/src/main/java/com/community/service/UserService.java
+/root/community/backend/src/main/java/com/community/dto/RegisterRequest.java
+/root/community/backend/src/main/java/com/community/entity/Article.java
+/root/community/backend/src/main/java/com/community/mapper/ArticleMapper.java
+/root/community/backend/src/main/java/com/community/dto/ApiResponse.java
+/root/community/backend/src/main/java/com/community/service/ArticleService.java
+/root/community/backend/src/main/java/com/community/mapper/UserMapper.java
+/root/community/backend/src/main/java/com/community/controller/ArticleController.java
+/root/community/backend/src/main/java/com/community/utils/PasswordUtil.java
+/root/community/backend/src/main/java/com/community/controller/UserController.java

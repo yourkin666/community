@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.community.mapper.ArticleMapper">
+
+    <!-- 结果映射 -->
+    <resultMap id="ArticleResultMap" type="com.community.entity.Article">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="summary" property="summary"/>
+        <result column="author_id" property="authorId"/>
+        <result column="status" property="status"/>
+        <result column="view_count" property="viewCount"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
+    <!-- 包含作者信息的结果映射 -->
+    <resultMap id="ArticleWithAuthorResultMap" type="com.community.entity.Article" extends="ArticleResultMap">
+        <association property="author" javaType="com.community.entity.User">
+            <id column="author_id" property="id"/>
+            <result column="author_username" property="username"/>
+            <result column="author_email" property="email"/>
+            <result column="author_avatar" property="avatar"/>
+            <result column="author_bio" property="bio"/>
+        </association>
+    </resultMap>
+
+    <!-- 基础查询字段 -->
+    <sql id="Base_Column_List">
+        id, title, content, summary, author_id, status, view_count, created_at, updated_at
+    </sql>
+
+    <!-- 包含作者信息的查询字段 -->
+    <sql id="Article_With_Author_Column_List">
+        a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at,
+        u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio
+    </sql>
+
+    <!-- 根据ID查询文章 -->
+    <select id="findById" resultMap="ArticleWithAuthorResultMap">
+        SELECT <include refid="Article_With_Author_Column_List"/>
+        FROM articles a
+        LEFT JOIN users u ON a.author_id = u.id
+        WHERE a.id = #{id}
+    </select>
+
+    <!-- 查询所有已发布的文章 -->
+    <select id="findPublishedArticles" resultMap="ArticleWithAuthorResultMap">
+        SELECT <include refid="Article_With_Author_Column_List"/>
+        FROM articles a
+        LEFT JOIN users u ON a.author_id = u.id
+        WHERE a.status = 'PUBLISHED'
+        ORDER BY a.created_at DESC
+    </select>
+
+    <!-- 根据作者ID查询文章 -->
+    <select id="findByAuthorId" resultMap="ArticleResultMap">
+        SELECT <include refid="Base_Column_List"/>
+        FROM articles
+        WHERE author_id = #{authorId}
+        ORDER BY created_at DESC
+    </select>
+
+    <!-- 根据状态查询文章 -->
+    <select id="findByStatus" resultMap="ArticleWithAuthorResultMap">
+        SELECT <include refid="Article_With_Author_Column_List"/>
+        FROM articles a
+        LEFT JOIN users u ON a.author_id = u.id
+        WHERE a.status = #{status}
+        ORDER BY a.created_at DESC
+    </select>
+
+    <!-- 插入新文章 -->
+    <insert id="insert" parameterType="com.community.entity.Article" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO articles (title, content, summary, author_id, status, view_count)
+        VALUES (#{title}, #{content}, #{summary}, #{authorId}, #{status}, #{viewCount})
+    </insert>
+
+    <!-- 更新文章信息 -->
+    <update id="update" parameterType="com.community.entity.Article">
+        UPDATE articles
+        <set>
+            <if test="title != null">title = #{title},</if>
+            <if test="content != null">content = #{content},</if>
+            <if test="summary != null">summary = #{summary},</if>
+            <if test="status != null">status = #{status},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 删除文章 -->
+    <delete id="deleteById">
+        DELETE FROM articles WHERE id = #{id}
+    </delete>
+
+    <!-- 增加文章浏览次数 -->
+    <update id="incrementViewCount">
+        UPDATE articles SET view_count = view_count + 1 WHERE id = #{id}
+    </update>
+
+</mapper>
