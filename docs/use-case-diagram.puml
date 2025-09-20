@@ -1,0 +1,156 @@
+@startuml 交流社区系统用例图
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam actor {
+    BackgroundColor #E1F5FE
+    BorderColor #0277BD
+    FontColor #01579B
+}
+skinparam usecase {
+    BackgroundColor #F3E5F5
+    BorderColor #7B1FA2
+    FontColor #4A148C
+}
+skinparam rectangle {
+    BackgroundColor #E8F5E8
+    BorderColor #388E3C
+    FontColor #1B5E20
+}
+
+title 交流社区平台用例图
+
+' 定义参与者
+actor "访客" as Visitor
+actor "注册用户" as User
+actor "文章作者" as Author
+actor "系统" as System
+
+' 定义系统边界
+rectangle "交流社区系统" {
+    
+    ' 用户管理模块
+    package "用户管理" {
+        usecase "用户注册" as UC01
+        usecase "用户登录" as UC02
+        usecase "用户登出" as UC03
+        usecase "查看用户资料" as UC04
+        usecase "编辑用户资料" as UC05
+        usecase "修改头像" as UC06
+        usecase "更新个人简介" as UC07
+    }
+    
+    ' 文章浏览模块
+    package "文章浏览" {
+        usecase "浏览文章列表" as UC08
+        usecase "查看文章详情" as UC09
+        usecase "搜索用户" as UC10
+        usecase "查看作者信息" as UC11
+    }
+    
+    ' 文章管理模块
+    package "文章管理" {
+        usecase "发布文章" as UC12
+        usecase "编辑文章" as UC13
+        usecase "删除文章" as UC14
+        usecase "保存草稿" as UC15
+        usecase "发布草稿" as UC16
+        usecase "查看我的文章" as UC17
+        usecase "管理文章状态" as UC18
+    }
+    
+    ' 系统功能模块
+    package "系统功能" {
+        usecase "统计文章浏览量" as UC19
+        usecase "生成文章摘要" as UC20
+        usecase "会话管理" as UC21
+        usecase "权限验证" as UC22
+        usecase "数据验证" as UC23
+    }
+}
+
+' 访客用例关系
+Visitor --> UC01 : 注册账号
+Visitor --> UC02 : 登录系统
+Visitor --> UC08 : 浏览公开文章
+Visitor --> UC09 : 查看文章内容
+Visitor --> UC10 : 搜索用户
+Visitor --> UC11 : 查看作者资料
+
+' 注册用户用例关系
+User --> UC02 : 登录系统
+User --> UC03 : 退出登录
+User --> UC04 : 查看个人资料
+User --> UC05 : 编辑个人信息
+User --> UC06 : 上传头像
+User --> UC07 : 更新简介
+User --> UC08 : 浏览文章
+User --> UC09 : 阅读文章
+User --> UC10 : 查找用户
+User --> UC11 : 查看他人资料
+User --> UC12 : 创建文章
+User --> UC15 : 保存草稿
+User --> UC17 : 管理个人文章
+
+' 文章作者用例关系
+Author --> UC12 : 发布新文章
+Author --> UC13 : 修改文章
+Author --> UC14 : 删除文章
+Author --> UC15 : 保存为草稿
+Author --> UC16 : 发布草稿
+Author --> UC17 : 查看文章列表
+Author --> UC18 : 管理发布状态
+
+' 系统自动用例关系
+System --> UC19 : 自动统计浏览
+System --> UC20 : 自动生成摘要
+System --> UC21 : 管理用户会话
+System --> UC22 : 验证操作权限
+System --> UC23 : 校验输入数据
+
+' 用例之间的关系
+
+' 包含关系 (include)
+UC02 ..> UC21 : <<include>>
+UC03 ..> UC21 : <<include>>
+UC05 ..> UC22 : <<include>>
+UC12 ..> UC22 : <<include>>
+UC13 ..> UC22 : <<include>>
+UC14 ..> UC22 : <<include>>
+UC01 ..> UC23 : <<include>>
+UC02 ..> UC23 : <<include>>
+UC05 ..> UC23 : <<include>>
+UC12 ..> UC23 : <<include>>
+
+' 扩展关系 (extend)
+UC20 ..> UC12 : <<extend>>
+UC19 ..> UC09 : <<extend>>
+
+' 泛化关系
+User --|> Visitor : 继承
+Author --|> User : 继承
+
+' 注释说明
+note right of UC01
+  新用户通过用户名、
+  邮箱和密码注册账号
+end note
+
+note right of UC12
+  用户可以发布文章，
+  系统自动生成摘要
+end note
+
+note right of UC19
+  每次查看文章时
+  自动增加浏览计数
+end note
+
+note bottom of System
+  系统负责自动化功能：
+  - 会话管理
+  - 权限控制  
+  - 数据统计
+  - 内容处理
+end note
+
+@enduml

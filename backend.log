@@ -38,623 +38,966 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.18)
 
-2025-09-14 09:06:06 [main] INFO  com.community.CommunityApplication - Starting CommunityApplication using Java 11.0.27 with PID 662076 (/root/community/backend/target/classes started by root in /root/community/backend)
-2025-09-14 09:06:06 [main] INFO  com.community.CommunityApplication - No active profile set, falling back to 1 default profile: "default"
-2025-09-14 09:06:07 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2025-09-14 09:06:07 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-2025-09-14 09:06:07 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-09-14 09:06:07 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
-2025-09-14 09:06:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1378 ms
+2025-09-19 12:33:10 [main] INFO  com.community.CommunityApplication - Starting CommunityApplication using Java 11.0.27 with PID 1018423 (/root/community/backend/target/classes started by root in /root/community/backend)
+2025-09-19 12:33:10 [main] INFO  com.community.CommunityApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-19 12:33:12 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.23] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.38]
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.23] using APR version [1.6.5].
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [false].
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1f  31 Mar 2020]
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-19 12:33:12 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-09-19 12:33:12 [main] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2025-09-19 12:33:12 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1192 ms
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
 Parsed mapper file: 'file [/root/community/backend/target/classes/mapper/ArticleMapper.xml]'
 Parsed mapper file: 'file [/root/community/backend/target/classes/mapper/UserMapper.xml]'
-2025-09-14 09:06:08 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
-2025-09-14 09:06:08 [main] INFO  com.community.CommunityApplication - Started CommunityApplication in 2.726 seconds (JVM running for 3.09)
+2025-09-19 12:33:12 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/api'
+2025-09-19 12:33:12 [main] INFO  com.community.CommunityApplication - Started CommunityApplication in 2.323 seconds (JVM running for 2.63)
 =================================
 交流社区后端服务启动成功！
 访问地址: http://localhost:8080/api
 =================================
-2025-09-14 09:06:58 [http-nio-8080-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-09-14 09:06:58 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2025-09-14 09:06:58 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-09-19 12:33:30 [http-nio-8080-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-19 12:33:30 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-19 12:33:30 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-19 12:33:31 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.community.dto.ApiResponse<com.community.entity.User> com.community.controller.UserController.register(com.community.dto.RegisterRequest) with 3 errors: [Field error in object 'registerRequest' on field 'username': rejected value [null]; codes [NotBlank.registerRequest.username,NotBlank.username,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.username,username]; arguments []; default message [username]]; default message [用户名不能为空]] [Field error in object 'registerRequest' on field 'email': rejected value [null]; codes [NotBlank.registerRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.email,email]; arguments []; default message [email]]; default message [邮箱不能为空]] [Field error in object 'registerRequest' on field 'password': rejected value [null]; codes [NotBlank.registerRequest.password,NotBlank.password,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [registerRequest.password,password]; arguments []; default message [password]]; default message [密码不能为空]] ]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16375c78] was not registered for synchronization because synchronization is not active
-2025-09-14 09:06:58 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2025-09-14 09:06:59 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-JDBC Connection [HikariProxyConnection@649567744 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16375c78]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c007706] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1388810998 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c007706]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@628ed94c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1074864547 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@628ed94c]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f36a271] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1643200999 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f36a271]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f4938d] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1316559410 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72a3c76a] was not registered for synchronization because synchronization is not active
+2025-09-19 12:35:32 [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-09-19 12:35:32 [http-nio-8080-exec-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1423655954 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
 ==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
 ==> Parameters: admin(String)
 <==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
 <==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f4938d]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72a3c76a]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f1a0717] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@836632196 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53fb36bb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1493531296 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f1a0717]
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:26:55, 2025-09-14 09:26:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53fb36bb]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53a18c0c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@818574423 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@580dc4a0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1456091601 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@53a18c0c]
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:26:55, 2025-09-14 09:26:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@580dc4a0]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e993761] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@836472798 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f12134c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@303293580 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:26:55, 2025-09-14 09:26:57, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f12134c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aa7de4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2024132788 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 3(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aa7de4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77850626] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1569342582 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 3, 2025-09-14 09:26:55, 2025-09-19 12:35:56, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77850626]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6abbda1f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1841807814 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 3(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6abbda1f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa7ceb9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1147156893 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
+==> Parameters: 1(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4aa7ceb9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20197e2c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@641399045 wrapping com.mysql.cj.jdbc.ConnectionImpl@318411d9] will not be managed by Spring
+==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
+==> Parameters: 1(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20197e2c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5867aa38] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1205936979 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5867aa38]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e66f6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@644808504 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9e66f6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6572cce9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1260052882 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6572cce9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e518ad] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@392874681 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1adb60e4] was not registered for synchronization because synchronization is not active
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57, admin, admin@community.com, null, <<BLOB>>
+JDBC Connection [HikariProxyConnection@1439456070 wrapping com.mysql.cj.jdbc.ConnectionImpl@4071d539] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1adb60e4]
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e518ad]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7dec4310] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@955175625 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7dec4310]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e262459] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1344332121 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e262459]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d7cb0a3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1524014727 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d7cb0a3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@262a2c25] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1507757087 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@262a2c25]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b64ac6b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2069853565 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:26:55, 2025-09-19 12:35:57, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b64ac6b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1eae02a5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1348985583 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 3(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1eae02a5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@940133d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@747745730 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 5, 2025-09-14 09:26:55, 2025-09-19 16:29:58, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@940133d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac970a0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@58187457 wrapping com.mysql.cj.jdbc.ConnectionImpl@9eb1f4f] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 3(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac970a0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d73b0cb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1552880126 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d73b0cb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@704c33c7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1672066675 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: INSERT INTO articles (title, content, summary, author_id, status, view_count) VALUES (?, ?, ?, ?, ?, ?)
-==> Parameters: hehe(String), po(String), oo(String), 1(Long), PUBLISHED(String), 0(Integer)
+==> Parameters: 测试文章(String), 测试内容(String), 测试内容(String), 1(Long), PUBLISHED(String), 0(Integer)
 <==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e993761]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@704c33c7]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@912c8db] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@402896823 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46a7f812] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@438532172 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 2(Long)
+==> Parameters: 4(Long)
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:10:30, 2025-09-14 09:10:30, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@912c8db]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46a7f812]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49165ea6] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@242311566 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 2(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:10:30, 2025-09-14 09:10:30, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49165ea6]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76e044f2] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@234407910 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 2(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76e044f2]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22a30eb4] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@875474234 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 2(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-14 09:10:30, 2025-09-14 09:10:30, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22a30eb4]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@544036f6] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1848398948 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 2(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@544036f6]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@154bc4a9] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1346984036 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 2
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@154bc4a9]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@729024cc] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1723909995 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 2
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@729024cc]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f49f446] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2051763659 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:04:02, 2025-09-14 09:04:02, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f49f446]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@182b85ed] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@496599993 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 1(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@182b85ed]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11a6c856] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@36937122 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-14 09:04:02, 2025-09-14 09:10:36, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11a6c856]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7914a31a] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@335351933 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 1(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7914a31a]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bc0722d] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2071482477 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 1, API测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:04:02, 2025-09-14 09:10:37, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bc0722d]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50886179] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@130979242 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: DELETE FROM articles WHERE id = ?
-==> Parameters: 1(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50886179]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70e0f4bf] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@523073291 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70e0f4bf]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7661d532] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1389294404 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7661d532]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b93706f] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2006214100 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@561e4d86] was not registered for synchronization because synchronization is not active
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-JDBC Connection [HikariProxyConnection@1539676937 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
-==> Parameters: 1(Long)
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b93706f]
-<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
-<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@561e4d86]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e3a6832] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1383275328 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
-==> Parameters: 1(Long)
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61d3ae66] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@712392825 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
-==> Parameters: 
-<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e3a6832]
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61d3ae66]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ffadaca] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@32263375 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ffadaca]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66fe892a] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1978576677 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66fe892a]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c5b01aa] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@82543446 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c5b01aa]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6297ccfa] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@585134052 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6297ccfa]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21725950] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1638028569 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21725950]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55439184] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@689939924 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55439184]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2955341a] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@820021104 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2955341a]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a4ddc37] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1908128157 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a4ddc37]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d176459] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1585890176 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b878c5d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1923520099 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
 ==> Parameters: test(String)
 <==      Total: 0
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d176459]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b878c5d]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a38e12] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2134284380 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
-==> Parameters: admin(String)
-<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
-<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a38e12]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@af2ca6a] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2046179283 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
-==> Parameters: admin(String)
-<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
-<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@af2ca6a]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a956846] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@71780151 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
-==> Parameters: admin(String)
-<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
-<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@a956846]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d3c6bfc] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1052187602 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d3c6bfc]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bf2570c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2132116350 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bf2570c]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36a1c802] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1353618542 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36a1c802]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b5138b] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@403187949 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b5138b]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76ba4c0d] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@109383882 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f582ccc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@319792573 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
 ==> Parameters: 1(Long)
 <==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
 <==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76ba4c0d]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f582ccc]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52f4af82] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@2140214270 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37aa24b1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1226590188 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
 ==> Parameters: 1(Long)
 <==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
 <==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52f4af82]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37aa24b1]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@730b745] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1893504519 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@730b745]
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@248e5afa] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@589057732 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@248e5afa]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ba71ba0] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@399410927 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ba71ba0]
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@772cb2e6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@15339165 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@772cb2e6]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@444a58ab] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@795795049 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7657c10d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@248563498 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
 ==> Parameters: admin(String)
 <==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
 <==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@444a58ab]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7657c10d]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3075b107] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@137137875 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@da56205] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1655970311 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3075b107]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f9608bc] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1393780110 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f9608bc]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a76c74c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@243805227 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 2(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:10:30, 2025-09-14 09:10:31, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a76c74c]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d0a8b64] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@828011822 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 2(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d0a8b64]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec4d25b] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1521094490 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 2(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 3, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ec4d25b]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54fc4a6c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1821514914 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 2(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54fc4a6c]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22cbc00c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@541315471 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
-==> Parameters: 
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
 <==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@22cbc00c]
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@da56205]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@252fd814] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@375831818 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58995526] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@562512207 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
 <==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@252fd814]
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@58995526]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60ca00b0] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1678734856 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
-==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60ca00b0]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@613ceef4] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1347483127 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
-==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
-==> Parameters: 1(Long)
-<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
-<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@613ceef4]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7185be2c] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1210988807 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e3470c0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@419887167 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: INSERT INTO articles (title, content, summary, author_id, status, view_count) VALUES (?, ?, ?, ?, ?, ?)
-==> Parameters:  MVCC (多版本并发控制) 的内容。(String), 核心概念：
-目的： 提高数据库的并发性能，避免读写冲突时加锁，实现非阻塞的并发读。
-工作原理： 主要依赖于行记录中的两个隐藏字段以及 undo log 和 ReadView。
-关键组件：
-隐藏字段：
-trx_id：记录最近修改该行记录的事务 ID。
-roll_ptr：指向该行的上一个版本（通过 undo log 计算得出）。
-undo log： 存储行的旧版本，用于事务回滚和 MVCC 的版本链。
-ReadView (可读视图)： 事务在进行快照读时创建，它记录了事务在某个时间点上数据库的状态，用于判断事务是否能看到某个版本的数据。 ReadView 中包含以下信息：
-当前活跃（未提交）的事务 ID 集合。
-最小活跃事务 ID。
-预分配事务 ID（最大活跃事务 ID + 1）。
-创建 ReadView 的事务 ID (creator_trx_id)。
-MVCC 的工作流程（如何判断数据的可见性）：
-判断是否由本事务生成： 如果 trx_id 等于 creator_trx_id，则记录可见，无需进一步判断。
-判断事务 ID 是否小于最小活跃事务 ID： 如果记录的事务 ID 小于最小活跃事务 ID，则说明该记录已提交，早于所有当前活跃事务，因此可见。
-判断事务 ID 是否在 ReadView 的 min_trx_id 和 max_trx_id 之间： 如果记录的事务 ID 不在活跃事务集合中，说明该记录已提交，因此可见。
-如果以上条件均不满足： 本条数据对当前事务不可见。 此时，通过 roll_ptr 回溯到上一版本的行记录，并重复以上判断，直到找到对当前事务可见的版本或数据不存在。
-ReadView 的生成时机：
-RC (Read Committed) 隔离级别： 每次执行快照读时都生成一个 ReadView。
-RR (Repeatable Read) 隔离级别： 第一次执行快照读时生成一个 ReadView，此后该事务的所有快照读都复用该 ReadView。若本身事务执行当前读操作，会重新建立快照。(String), 核心概念：
-目的： 提高数据库的并发性能，避免读写冲突时加锁，实现非阻塞的并发读。
-工作原理： 主要依赖于行记录中的两个隐藏字段以及 undo log 和 ReadView。
-关键组件：
-隐藏字段：
-...(String), 1(Long), PUBLISHED(String), 0(Integer)
+==> Parameters: 11(String), 111(String), 111(String), 1(Long), PUBLISHED(String), 0(Integer)
 <==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7185be2c]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e3470c0]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15506aa3] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@739221263 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ea7a6d2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@818836025 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 3(Long)
+==> Parameters: 5(Long)
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:26:55, 2025-09-14 09:26:55, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15506aa3]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ea7a6d2]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c3dfd85] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1769364722 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@110a4359] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1646217604 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 3(Long)
+==> Parameters: 5(Long)
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-14 09:26:55, 2025-09-14 09:26:55, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c3dfd85]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@110a4359]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33e72636] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1886725146 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b8b69c8] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1490608491 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 3(Long)
+==> Parameters: 5(Long)
 <==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33e72636]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b8b69c8]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50eb9dbf] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1301017388 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@514a4993] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1340748090 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
-==> Parameters: 3(Long)
+==> Parameters: 5(Long)
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-14 09:26:55, 2025-09-14 09:26:56, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50eb9dbf]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@514a4993]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@260d03b5] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@713520302 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c890991] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1334626114 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
-==> Parameters: 3(Long)
+==> Parameters: 5(Long)
 <==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@260d03b5]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c890991]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7fc1dd] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1399060742 wrapping com.mysql.cj.jdbc.ConnectionImpl@3987f80e] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb53307] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@383972294 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:26:55, 2025-09-14 09:26:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
 <==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 2
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c7fc1dd]
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb53307]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a1591b] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@201964896 wrapping com.mysql.cj.jdbc.ConnectionImpl@20925a94] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f23108b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2032977439 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
 ==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
 ==> Parameters: 
 <==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
-<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-14 09:26:55, 2025-09-14 09:26:57, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
 <==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
-<==      Total: 2
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a1591b]
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f23108b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6331f629] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1897452331 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
+==> Parameters: 1(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6331f629]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e8a6a9c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2074178040 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
+==> Parameters: 1(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e8a6a9c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b38437a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@227155471 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-14 09:03:54
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b38437a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68187ce8] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@769297110 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: UPDATE users SET username = ?, email = ?, password = ?, bio = ? WHERE id = ?
+==> Parameters: admin(String), admin@community.com(String), e10adc3949ba59abbe56e057f20f883e(String), 没什么好介绍的
+(String), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68187ce8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e8b2b67] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@127191819 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e8b2b67]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0fa62] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@551753203 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, title, content, summary, author_id, status, view_count, created_at, updated_at FROM articles WHERE author_id = ? ORDER BY created_at DESC
+==> Parameters: 1(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0fa62]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39c1abcb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@736360880 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39c1abcb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74706420] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1463999818 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74706420]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21f1d384] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@241903143 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: 111(String)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21f1d384]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c8672e0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@54847751 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE email = ?
+==> Parameters: 2518016656@qq.com(String)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c8672e0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@623461a9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2100960893 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: INSERT INTO users (username, email, password, avatar, bio) VALUES (?, ?, ?, ?, ?)
+==> Parameters: 111(String), 2518016656@qq.com(String), 96e79218965eb72c92a549dd5a330112(String), null, null
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@623461a9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b419be] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1761084799 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 3, 111, 2518016656@qq.com, 96e79218965eb72c92a549dd5a330112, null, <<BLOB>>, 2025-09-19 16:44:13, 2025-09-19 16:44:13
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b419be]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52bb435a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@43313677 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: 111(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 3, 111, 2518016656@qq.com, 96e79218965eb72c92a549dd5a330112, null, <<BLOB>>, 2025-09-19 16:44:13, 2025-09-19 16:44:13
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52bb435a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@797f8efa] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1324318230 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@797f8efa]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691b199d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2104644848 wrapping com.mysql.cj.jdbc.ConnectionImpl@59d95e30] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691b199d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@326dfc75] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1027372640 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@326dfc75]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77944c46] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1991678780 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77944c46]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d6eac7b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@432391662 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d6eac7b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1201bf4e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1697089610 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: INSERT INTO articles (title, content, summary, author_id, status, view_count) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: wqda(String), cacac(String), cdsvd(String), 1(Long), PUBLISHED(String), 0(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1201bf4e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e007c16] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@121428548 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e007c16]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ad962de] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1678789168 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ad962de]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bf8a9c9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2051466746 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 6(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bf8a9c9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac8844d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@141757763 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac8844d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f8bad23] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1643099763 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 6(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f8bad23]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e816177] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1713917550 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e816177]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5781f90a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1384949086 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5781f90a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@421cd043] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1789077415 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@421cd043]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36a61d49] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@893114910 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36a61d49]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bbd45b4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1970059733 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bbd45b4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f12181] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1397930853 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f12181]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1370a894] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2049075814 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1370a894]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99ab4d6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@143839354 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@99ab4d6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33652462] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2107467046 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33652462]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10996ca1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@583608612 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10996ca1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@232bcc8e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@684201211 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@232bcc8e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bd6ac66] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1876081933 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bd6ac66]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79d14543] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@986127778 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79d14543]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5802f424] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1581835832 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5802f424]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@611cd281] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@503428057 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@611cd281]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4786ab7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1757497989 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4786ab7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aef2cea] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@206373675 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1aef2cea]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cc862eb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1621646752 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3cc862eb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27457a24] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1033440410 wrapping com.mysql.cj.jdbc.ConnectionImpl@7b679aa6] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27457a24]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5512b1fd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@57232002 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: test(String)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5512b1fd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b25dc35] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@140323926 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT id, username, email, password, avatar, bio, created_at, updated_at FROM users WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, email, password, avatar, bio, created_at, updated_at
+<==        Row: 1, admin, admin@community.com, e10adc3949ba59abbe56e057f20f883e, null, <<BLOB>>, 2025-09-12 12:16:56, 2025-09-19 16:40:10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b25dc35]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@169e280] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1644299835 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@169e280]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c44b027] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1675908734 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c44b027]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bd9fc3a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1598306865 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: INSERT INTO articles (title, content, summary, author_id, status, view_count) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: 软件实训(String), 11(String), 去(String), 1(Long), PUBLISHED(String), 0(Integer)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bd9fc3a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71eb7a12] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@251679660 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 7, 软件实训, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-20 08:55:35, 2025-09-20 08:55:35, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71eb7a12]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35daa285] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1855487547 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 7, 软件实训, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-20 08:55:35, 2025-09-20 08:55:35, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35daa285]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a25cd5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@361502318 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 7(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a25cd5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37c70433] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1257628153 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 7, 软件实训, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 1, 2025-09-20 08:55:35, 2025-09-20 08:55:36, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@37c70433]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73ca3ce5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2091079731 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: UPDATE articles SET view_count = view_count + 1 WHERE id = ?
+==> Parameters: 7(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73ca3ce5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c3e9441] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1590203861 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 7, 软件实训, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-20 08:55:35, 2025-09-20 08:55:36, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c3e9441]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f160ef1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1459330824 wrapping com.mysql.cj.jdbc.ConnectionImpl@cf1946b] will not be managed by Spring
+==>  Preparing: SELECT a.id, a.title, a.content, a.summary, a.author_id, a.status, a.view_count, a.created_at, a.updated_at, u.username as author_username, u.email as author_email, u.avatar as author_avatar, u.bio as author_bio FROM articles a LEFT JOIN users u ON a.author_id = u.id WHERE a.status = 'PUBLISHED' ORDER BY a.created_at DESC
+==> Parameters: 
+<==    Columns: id, title, content, summary, author_id, status, view_count, created_at, updated_at, author_username, author_email, author_avatar, author_bio
+<==        Row: 7, 软件实训, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-20 08:55:35, 2025-09-20 08:55:36, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 6, wqda, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 17:05:48, 2025-09-19 17:05:48, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 5, 11, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 2, 2025-09-19 16:39:47, 2025-09-19 16:39:47, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 4, 测试文章, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 0, 2025-09-19 16:35:02, 2025-09-19 16:35:02, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 3,  MVCC (多版本并发控制) 的内容。, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 6, 2025-09-14 09:26:55, 2025-09-19 16:29:59, admin, admin@community.com, null, <<BLOB>>
+<==        Row: 2, hehe, <<BLOB>>, <<BLOB>>, 1, PUBLISHED, 4, 2025-09-14 09:10:30, 2025-09-14 09:25:41, admin, admin@community.com, null, <<BLOB>>
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f160ef1]
